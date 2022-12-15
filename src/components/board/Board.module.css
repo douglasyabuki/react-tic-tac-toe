@@ -3,11 +3,6 @@
   flex-direction: column;
 }
 
-.game h1 {
-  padding-top: 1.5rem;
-  color: #fff;
-}
-
 .board {
   max-width: 450px;
   margin: 0 auto;
@@ -15,4 +10,15 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.message{
+  height: 10vh;
+  padding: .2rem;
+}
+
+.message h1, p{
+  padding: 0px;
+  margin: 0;
+  color: #fff;
 }

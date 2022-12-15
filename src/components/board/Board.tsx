@@ -13,15 +13,14 @@ import styles from "./Board.module.css";
 
 // Main function
 export default function Board() {
-  
   // States
   const [currentBoard, setCurrentBoard] = useState<CellValues[]>(initialState);
   const [currentPlayer, setCurrentPlayer] = useState<boolean>(false);
   const [currentWinner, setCurrentWinner] = useState<CellValues>("");
   const [score, setScore] = useState<{
-    playerO: number,
-    playerX: number
-  }>({playerO:0, playerX:0})
+    playerO: number;
+    playerX: number;
+  }>({ playerO: 0, playerX: 0 });
 
   // Function to set value on cell - It verifies if the cell is empty and if there is a winner
   const onClick = (cellId: number) => {
@@ -39,8 +38,22 @@ export default function Board() {
       }
       setCurrentBoard(copyBoard);
       checkWinner();
+      highlightPlayer();
     }
   };
+
+  //Function to highlight the next player
+  const highlightPlayer = (): void =>{
+    const playerOne = document.querySelector("#player1");
+    const playerTwo = document.querySelector("#player2");
+    if (currentPlayer){
+      playerOne!.classList.add("highlight");
+      playerTwo!.classList.remove("highlight");
+    } else {
+      playerOne!.classList.remove("highlight");
+      playerTwo!.classList.add("highlight");
+    }
+  }
 
   //Function to search for a winner
   const checkWinner = () => {
@@ -57,14 +70,16 @@ export default function Board() {
       currentBoard[positions[2]] == "X"
     ) {
       setCurrentWinner("X");
-      setScore({...score, playerX: score.playerX + 1});
+      setCurrentPlayer(false);
+      setScore({ ...score, playerX: score.playerX + 1 });
     } else if (
       currentBoard[positions[0]] == "O" &&
       currentBoard[positions[1]] == "O" &&
       currentBoard[positions[2]] == "O"
     ) {
       setCurrentWinner("O");
-      setScore({...score, playerO: score.playerO + 1});
+      setScore({ ...score, playerO: score.playerO + 1 });
+      setCurrentPlayer(true);
     }
   };
 
@@ -109,7 +124,11 @@ export default function Board() {
           </div>
         ))}
       </div>
-      {currentWinner ? <h1>Player "{currentWinner}" won</h1> : <h1></h1>}
+      {currentWinner ? 
+      <div className={styles.message}>
+        <h1>Player "{currentWinner}" won</h1>
+        <p>Loser starts next</p>
+        </div> : <div className={styles.message}></div>}
       <RoundButton
         value="Reset"
         onClickHandler={() => resetGame()}
