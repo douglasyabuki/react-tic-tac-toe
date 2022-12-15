@@ -7,7 +7,7 @@ import { CellValues } from "./cell-values/cellValues";
 //Destructuring the Props
 interface Props {
   value: CellValues;
-  handleClick?: any;
+  handleClick?: React.MouseEventHandler;
 }
 
 //This function returns a single square to the board

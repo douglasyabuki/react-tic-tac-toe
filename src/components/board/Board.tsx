@@ -6,6 +6,7 @@ import Cell from "../cell/Cell";
 import RoundButton from "../round-button/RoundButton";
 import { initialState } from "./initial-board/initialState";
 import { CellValues } from "../cell/cell-values/cellValues";
+import Scoreboard from "../score/Scoreboard";
 
 // CSS
 import styles from "./Board.module.css";
@@ -17,6 +18,10 @@ export default function Board() {
   const [currentBoard, setCurrentBoard] = useState<CellValues[]>(initialState);
   const [currentPlayer, setCurrentPlayer] = useState<boolean>(false);
   const [currentWinner, setCurrentWinner] = useState<CellValues>("");
+  const [score, setScore] = useState<{
+    playerO: number,
+    playerX: number
+  }>({playerO:0, playerX:0})
 
   // Function to set value on cell - It verifies if the cell is empty and if there is a winner
   const onClick = (cellId: number) => {
@@ -52,12 +57,14 @@ export default function Board() {
       currentBoard[positions[2]] == "X"
     ) {
       setCurrentWinner("X");
+      setScore({...score, playerX: score.playerX + 1});
     } else if (
       currentBoard[positions[0]] == "O" &&
       currentBoard[positions[1]] == "O" &&
       currentBoard[positions[2]] == "O"
     ) {
       setCurrentWinner("O");
+      setScore({...score, playerO: score.playerO + 1});
     }
   };
 
@@ -94,6 +101,7 @@ export default function Board() {
   //Main function return
   return (
     <div className={styles.game}>
+      <Scoreboard score={score}></Scoreboard>
       <div className={styles.board}>
         {currentBoard.map((cell, cellId) => (
           <div key={cellId}>
