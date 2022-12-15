@@ -1,0 +1,18 @@
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+.game h1 {
+  padding-top: 1.5rem;
+  color: #fff;
+}
+
+.board {
+  max-width: 450px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}

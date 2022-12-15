@@ -1,0 +1,12 @@
+.main {
+  min-height: 70vh;
+  text-align: center;
+  padding: 2em;
+}
+
+.main {
+  background-color: #244199;
+}
+.main h1 {
+  margin-bottom: 0.8em;
+}

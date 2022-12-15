@@ -1,0 +1,21 @@
+.buttonContainer {
+  margin: 0 auto;
+  width: 450px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.buttonContainer button {
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  background: #152659;
+  box-shadow: -7px -7px 14px #080f24, 7px 7px 14px #223d8e;
+  color: #f2f2f2;
+  font-size: 25px;
+}
+
+.buttonContainer button:hover {
+  box-shadow: -15px -15px 30px #101c42, 15px 15px 30px #1a3070;
+}
