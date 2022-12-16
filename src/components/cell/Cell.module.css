@@ -1,16 +1,17 @@
+/* Mobile First */
 .cell {
   margin: 0 auto;
   display: flex;
 }
 
 .cell button {
-  max-height: 150px;
-  min-height: 150px;
-  max-width: 150px;
-  min-width: 150px;
+  max-height: 90px;
+  min-height: 90px;
+  max-width: 90px;
+  min-width: 90px;
+  font-size: 45px;
   text-align: center;
   line-height: 0px;
-  font-size: 75px;
   transition: 0.3s;
 }
 
@@ -18,4 +19,26 @@
   cursor: pointer;
   background-color: #77a0f2;
   opacity: 0.3;
+}
+
+/* iPads & tablets */
+@media (min-width: 479.999px){
+  .cell button{
+    max-height: 120px;
+    min-height: 120px;
+    max-width: 120px;
+    min-width: 120px;
+    font-size: 60px;
+  }
+}
+
+/* Small Screens */
+@media (min-width: 767.999px){
+  .cell button{
+    max-height: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    min-width: 150px;
+    font-size: 75px;
+  }
 }

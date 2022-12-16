@@ -1,8 +1,10 @@
+/* Mobile First */
 .scoreboard {
   margin: 0 auto;
   display: flex;
-  width: 300px;
-  height: 120px;
+  width: 250px;
+  height: 100px;
+  font-size: 25px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: -7px -7px 14px #080f24, 7px 7px 14px #223d8e;
@@ -31,5 +33,31 @@
 
 .scoreboardDivision h1 {
   font-size: 50px;
-  margin-top:10px;
+  margin-top: 10px;
+}
+
+/* iPads & tablets */
+@media (min-width: 479.999px) {
+  .scoreboard {
+    width: 300px;
+    height: 120px;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .scoreboardDivision {
+    width: 120px;
+    padding: 20px;
+    height: 100px;
+  }
+
+  .scoreboardDivision h2 {
+    font-size: 20px;
+  }
+  
+  .scoreboardDivision h1 {
+    font-size: 50px;
+    margin-top: 10px;
+  }
 }

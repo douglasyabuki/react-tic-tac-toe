@@ -4,7 +4,7 @@
 }
 
 .board {
-  max-width: 450px;
+  max-width: 100%;
   margin: 0 auto;
   padding-top: 2rem;
   display: grid;
@@ -15,10 +15,15 @@
 .message{
   height: 10vh;
   padding: .2rem;
+  margin-bottom: .5rem;
 }
 
 .message h1, p{
   padding: 0px;
   margin: 0;
   color: #fff;
+}
+
+.message p{
+  opacity: .8;
 }
