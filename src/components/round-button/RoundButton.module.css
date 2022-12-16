@@ -31,7 +31,7 @@
 }
 
 /* Medium Screens */
-@media (min-width: 1023.999px){
+@media (min-width: 1023.999px) {
   .buttonContainer button {
     height: 70px;
     width: 70px;
@@ -40,7 +40,7 @@
 }
 
 /* Medium Screens +*/
-@media (min-width: 1279.999px){
+@media (min-width: 1279.999px) {
   .buttonContainer button {
     height: 90px;
     width: 90px;
@@ -49,7 +49,7 @@
 }
 
 /* Large Screen */
-@media (min-width: 1919.999px){
+@media (min-width: 1919.999px) {
   .buttonContainer button {
     height: 150px;
     width: 150px;
@@ -58,7 +58,7 @@
 }
 
 /* Larger Screen */
-@media (min-width: 2559.999px){
+@media (min-width: 2559.999px) {
   .buttonContainer button {
     height: 200px;
     width: 200px;

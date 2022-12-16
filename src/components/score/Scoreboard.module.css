@@ -55,7 +55,7 @@
   .scoreboardDivision h2 {
     font-size: 20px;
   }
-  
+
   .scoreboardDivision h1 {
     font-size: 50px;
     margin-top: 10px;
@@ -63,7 +63,7 @@
 }
 
 /* Small Screens */
-@media (min-width: 767.999px){
+@media (min-width: 767.999px) {
   .scoreboard {
     height: 10vh;
   }
@@ -78,7 +78,7 @@
     font-weight: 600;
     font-size: 20px;
   }
-  
+
   .scoreboardDivision h1 {
     font-size: 55px;
     margin-top: 10px;
@@ -86,19 +86,19 @@
 }
 
 /* Medium Screens */
-@media (min-width: 1023.999px){
-  .scoreboardDivision h2{
+@media (min-width: 1023.999px) {
+  .scoreboardDivision h2 {
     font-size: 17px;
   }
 
-  .scoreboardDivision h1{
+  .scoreboardDivision h1 {
     font-size: 50px;
   }
 }
 
 /* Large Screen */
-@media (min-width: 1919.999px){
-  .scoreboard{
+@media (min-width: 1919.999px) {
+  .scoreboard {
     width: 320px;
   }
 
@@ -106,18 +106,18 @@
     padding: 2vh;
   }
 
-  .scoreboardDivision h2{
+  .scoreboardDivision h2 {
     font-size: 21px;
   }
 
-  .scoreboardDivision h1{
+  .scoreboardDivision h1 {
     font-size: 60px;
   }
 }
 
 /* Larger Screen */
-@media (min-width: 2559.999px){
-  .scoreboard{
+@media (min-width: 2559.999px) {
+  .scoreboard {
     width: 450px;
   }
 }
