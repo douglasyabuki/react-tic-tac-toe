@@ -18,3 +18,10 @@
     font-size: 25px;
   }
 }
+
+/* Small Screens */
+@media (min-width: 767.999px){
+  .header h1{
+    font-size: 35px;
+  }
+}

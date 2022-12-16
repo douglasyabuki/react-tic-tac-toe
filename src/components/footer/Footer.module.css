@@ -1,3 +1,4 @@
+/* Mobile First */
 .footer {
   display: flex;
   height: 15vh;
@@ -6,3 +7,18 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Small Screens */
+@media (min-width: 767.999px){
+  .footer span {
+    font-size: 20px;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 1023.999px){
+  .footer span {
+    font-size: 15px;
+  }
+}
+
